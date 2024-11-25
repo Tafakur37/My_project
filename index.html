@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>allowww</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Comic+Neue:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #432E54;
+        opacity: 1;
+        transition: opacity 1.5s ease;
+    }
+    .gif {
+        height: 150px;
+    }
+    .container {
+        width: 470px;
+        height: 350px;
+        background-color: #f20044;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        box-shadow: -10px 10px 90px #f20044;
+    }
+    .tombol {
+        margin-top: 5px;
+        width: 200px;
+        height: 50px;
+        color: white;
+        background-color: #f0c56e;
+        border: none;
+        border-radius: 10px;
+        font-family: "Comic Neue", cursive;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 25px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    .tombol:hover {
+        transform: scale(1.1);
+    }
+    .tombol:active {
+        transform: scale(1);
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Oh, Halloooww!!</h1>
+        <img class="gif" src="img\download.gif" alt="wave">
+        <a href="index_2.html"><button class="tombol" onclick="goToNextPage"> Klik saya </button></a>
+    </div>
+</body>
+<script>
+    function goToNextPage() {
+        document.body.style.opacity = 0;
+
+        document.body.addEventListener('transitionend', function() {
+            window.location.href = 'index1.html';
+        });
+    }
+</script>
+</html>
